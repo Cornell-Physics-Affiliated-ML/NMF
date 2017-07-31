@@ -1,0 +1,23 @@
+ ************************************************************************
+ nmf.c: online non-negative matrix factorization by conservative learning
+ ************************************************************************
+
+ compile:	gcc -O2 nmf.c -lm -o nmf
+
+ run:		./nmf datafile codesize weight datasize batchsize id
+
+
+ datafile:	ASCII file of data vectors; the header is a single line 		of two integers: the number of data and the size of the 		data vectors.
+
+ codesize:	number of feature vectors
+
+ weight:		relative weight assigned to encoder/decoder changes
+
+ datasize:	number of data to process; data are recycled when this 		exceeds the number of data in the datafile
+
+ batchsize:	number of data processed between outputs
+
+ id:		string id for the output files; reconstruction error is 		written to id.log, the model is written to id.model
+
+ ************************************************************************
+ Veit Elser, 7/31/17
